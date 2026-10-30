@@ -60,6 +60,9 @@
   "ModeToggle": {
     "switchMode": "Mudar para o modo {mode}"
   },
+  "LanguageToggle": {
+    "switchTo": "Mudar para {language}"
+  },
   "AccountAccess": {
     "unlinkedTitle": "Este usuário não está vinculado a uma conta",
     "unlinkedBody": "Nada do que você alterar será salvo enquanto isso não for resolvido — o banco de dados rejeita qualquer gravação de um usuário sem conta ou função. Se você foi convidado para uma equipe, peça ao proprietário para reenviar o convite. Em uma instalação própria, verifique se a migração de criação de conta rodou para este usuário.",
