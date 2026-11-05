@@ -634,7 +634,7 @@ function ConditionForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => v === "tag" ? t("contactHasTag") : v === "contact_field" ? t("contactField") : t("capturedVariable")}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="var">{t("capturedVariable")}</SelectItem>
@@ -657,7 +657,7 @@ function ConditionForm({
               onValueChange={(v) => onUpdateConfig({ subject_key: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder={t("pickTag")} />
+                <SelectValue>{(v: string) => tags.find((tag) => tag.id === v)?.name ?? t("pickTag")}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {tags.map((t) => (
@@ -673,7 +673,7 @@ function ConditionForm({
               onValueChange={(v) => onUpdateConfig({ subject_key: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder={t("pickField")} />
+                <SelectValue>{(v: string) => ({ name: t("fieldName"), email: t("fieldEmail"), phone: t("fieldPhone"), company: t("fieldCompany") } as Record<string, string>)[v] ?? (v || t("pickField"))}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="name">{t("fieldName")}</SelectItem>
@@ -710,7 +710,7 @@ function ConditionForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => ({ present: t("isPresent"), absent: t("isAbsent"), equals: t("equals"), contains: t("contains") } as Record<string, string>)[v] ?? v}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="present">{t("isPresent")}</SelectItem>
@@ -789,7 +789,7 @@ function SetTagForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => (v === "remove" ? t("removeTag") : t("addTag"))}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="add">{t("addTag")}</SelectItem>
@@ -805,7 +805,7 @@ function SetTagForm({
               onValueChange={(v) => onUpdateConfig({ tag_id: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder={t("pickTag")} />
+                <SelectValue>{(v: string) => tags.find((tag) => tag.id === v)?.name ?? t("pickTag")}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {tags.map((t) => (
@@ -961,7 +961,7 @@ function SendMediaForm({
           }}
         >
           <SelectTrigger className="bg-muted">
-            <SelectValue />
+            <SelectValue>{(v: string) => v === "video" ? t("videoLabel") : v === "document" ? t("documentLabel") : t("imageLabel")}</SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="image">{t("imageLabel")}</SelectItem>

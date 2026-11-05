@@ -1576,7 +1576,12 @@
       "toastUploadSuccess": "이미지가 업로드되었습니다.",
       "toastUploadFailed": "업로드에 실패했습니다.",
       "qualityScore": "Meta quality score",
-      "headerSampleAlt": "Header sample"
+      "headerSampleAlt": "Header sample",
+      "categories": {
+        "Marketing": "Marketing",
+        "Utility": "Utility",
+        "Authentication": "Authentication"
+      }
     },
     "roles": {
       "admin": "관리자",

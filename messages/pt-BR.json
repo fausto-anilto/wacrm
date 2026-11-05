@@ -1576,7 +1576,12 @@
       "toastUploadSuccess": "Imagem enviada.",
       "toastUploadFailed": "Falha no envio.",
       "qualityScore": "Nota de qualidade da Meta",
-      "headerSampleAlt": "Exemplo do cabeçalho"
+      "headerSampleAlt": "Exemplo do cabeçalho",
+      "categories": {
+        "Marketing": "Marketing",
+        "Utility": "Utilidade",
+        "Authentication": "Autenticação"
+      }
     },
     "roles": {
       "admin": "Administrador",

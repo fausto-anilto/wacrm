@@ -322,7 +322,7 @@ export function Step3Personalize({
                       }
                     >
                       <SelectTrigger className="w-full border-border bg-muted text-foreground">
-                        <SelectValue />
+                        <SelectValue>{(v: string) => v === 'field' ? t('personalize.typeContact') : v === 'custom_field' ? t('personalize.typeCustom') : t('personalize.typeStatic')}</SelectValue>
                       </SelectTrigger>
                       <SelectContent className="border-border bg-popover">
                         <SelectItem value="static">{t('personalize.typeStatic')}</SelectItem>
@@ -355,7 +355,14 @@ export function Step3Personalize({
                         }
                       >
                         <SelectTrigger className="w-full border-border bg-muted text-foreground">
-                          <SelectValue placeholder={t('personalize.selectContactField')} />
+                          <SelectValue>
+                            {(v: string) => {
+                              const field = contactFields.find((f) => f.value === v);
+                              return field
+                                ? t(`personalize.fieldMap.${field.labelKey}`)
+                                : t('personalize.selectContactField');
+                            }}
+                          </SelectValue>
                         </SelectTrigger>
                         <SelectContent className="border-border bg-popover">
                           {contactFields.map((field) => (
@@ -373,15 +380,16 @@ export function Step3Personalize({
                         }
                       >
                         <SelectTrigger className="w-full border-border bg-muted text-foreground">
-                          <SelectValue
-                            placeholder={
-                              loadingFields
+                          <SelectValue>
+                            {(v: string) =>
+                              customFields.find((f) => f.id === v)?.field_name ??
+                              (loadingFields
                                 ? t('personalize.loading')
                                 : customFields.length === 0
                                   ? t("personalize.noCustomFields")
-                                  : t("personalize.selectCustomFieldAlt")
+                                  : t("personalize.selectCustomFieldAlt"))
                             }
-                          />
+                          </SelectValue>
                         </SelectTrigger>
                         <SelectContent className="border-border bg-popover">
                           {customFields.map((f) => (
