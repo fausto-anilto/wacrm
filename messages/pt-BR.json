@@ -15,7 +15,7 @@
     "createAccount": "Criar conta"
   },
   "Sidebar": {
-    "title": "Askan CRM",
+    "title": "ASKAN CRM",
     "dashboard": "Painel",
     "inbox": "Caixa de entrada",
     "notifications": "Notificações",
@@ -1316,7 +1316,7 @@
       "labelTooLong": "A identificação deve ter no máximo {max} caracteres",
       "copied": "Link do convite copiado",
       "clipboardBlocked": "Área de transferência bloqueada — copie o link manualmente",
-      "whatsappMessage": "Entre em {accountName} no Askan CRM usando este link (válido por {expiresInDays} dias): {url}"
+      "whatsappMessage": "Entre em {accountName} no ASKAN CRM usando este link (válido por {expiresInDays} dias): {url}"
     },
     "tagsAndFields": {
       "title": "Campos e tags",
@@ -1427,8 +1427,8 @@
       "saveResubmit": "Salvar e reenviar",
       "submitApproval": "Enviar para aprovação",
       "deleteDialogTitle": "Excluir modelo?",
-      "deleteMetaDesc": "\"{name}\" será excluído da Meta e do Askan CRM. Disparos ativos que usam este modelo vão falhar no próximo envio. Não pode ser desfeito.",
-      "deleteLocalDesc": "\"{name}\" será excluído do Askan CRM. Ele nunca foi enviado à Meta, então não há nada a limpar por lá.",
+      "deleteMetaDesc": "\"{name}\" será excluído da Meta e do ASKAN CRM. Disparos ativos que usam este modelo vão falhar no próximo envio. Não pode ser desfeito.",
+      "deleteLocalDesc": "\"{name}\" será excluído do ASKAN CRM. Ele nunca foi enviado à Meta, então não há nada a limpar por lá.",
       "deleting": "Excluindo…",
       "delete": "Excluir",
       "toastLoadFailed": "Falha ao carregar os modelos",
@@ -1469,7 +1469,7 @@
       "notConnected": "Não conectado",
       "connectedDesc": "Seu token de acesso é aceito pela Meta. Veja o status do registro abaixo para saber se os webhooks estão de fato ligados.",
       "notConnectedDesc": "Configure abaixo suas credenciais da API da Meta para conectar sua conta do WhatsApp Business.",
-      "registered": "Registrado — a Meta vai entregar eventos ao Askan CRM",
+      "registered": "Registrado — a Meta vai entregar eventos ao ASKAN CRM",
       "notRegistered": "Não registrado — a Meta não vai entregar eventos",
       "verifyWithMeta": "Verificar com a Meta",
       "subscribedSince": "Inscrito desde {date}. Clique em Verificar com a Meta se os eventos pararem de chegar.",
@@ -1493,7 +1493,7 @@
       "twoStepPin": "PIN da verificação em duas etapas",
       "optional": "(opcional)",
       "pinPlaceholder": "PIN de 6 dígitos do Gerenciador do WhatsApp da Meta",
-      "pinHint": "Necessário só para receber mensagens em um número de produção. Defina-o no Meta Business Manager → Contas do WhatsApp → Números de telefone → Verificação em duas etapas e cole aqui para o Askan CRM inscrever o número — caso contrário, a Meta envia os eventos ao último app que reivindicou o número (o problema que afeta segundos números em uma WABA compartilhada). Números de teste da Meta não têm PIN e já vêm registrados — deixe em branco para eles. Deixar em branco também mantém um registro existente intacto.",
+      "pinHint": "Necessário só para receber mensagens em um número de produção. Defina-o no Meta Business Manager → Contas do WhatsApp → Números de telefone → Verificação em duas etapas e cole aqui para o ASKAN CRM inscrever o número — caso contrário, a Meta envia os eventos ao último app que reivindicou o número (o problema que afeta segundos números em uma WABA compartilhada). Números de teste da Meta não têm PIN e já vêm registrados — deixe em branco para eles. Deixar em branco também mantém um registro existente intacto.",
       "webhookTitle": "Configuração do webhook",
       "webhookDesc": "Use esta URL como callback do webhook no painel do app da Meta.",
       "webhookUrl": "URL de callback do webhook",
@@ -1664,7 +1664,7 @@
     },
     "aiConfig": {
       "title": "Configuração do agente",
-      "description": "Use sua própria chave da OpenAI ou da Anthropic. O Askan CRM chama o provedor direto com a sua chave — sem taxa de IA por usuário, e seus dados continuam seus. Isso alimenta as respostas rascunhadas por IA na caixa de entrada, o robô de resposta automática e o Playground.",
+      "description": "Use sua própria chave da OpenAI ou da Anthropic. O ASKAN CRM chama o provedor direto com a sua chave — sem taxa de IA por usuário, e seus dados continuam seus. Isso alimenta as respostas rascunhadas por IA na caixa de entrada, o robô de resposta automática e o Playground.",
       "adminOnlyConfig": "Só administradores e proprietários podem alterar a configuração de IA.",
       "loadFailed": "Falha ao carregar a configuração de IA",
       "providerAndKey": "Provedor e chave",

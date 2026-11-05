@@ -135,7 +135,7 @@ export function InviteMemberDialog({
         // string if `account` hasn't loaded yet (shouldn't happen
         // — the dialog requires admin+ which requires a loaded
         // profile — but stay safe).
-        accountName: account?.name ?? 'our Askan CRM account',
+        accountName: account?.name ?? 'our ASKAN CRM account',
       });
       onCreated();
     } catch (err) {
@@ -164,7 +164,7 @@ export function InviteMemberDialog({
     // they're being invited to before clicking through. This matters
     // for users in multi-team contexts where "our wacrm account"
     // wouldn't be enough to disambiguate.
-    const accountName = result?.accountName ?? 'our Askan CRM account';
+    const accountName = result?.accountName ?? 'our ASKAN CRM account';
     const message = t('whatsappMessage', { accountName, expiresInDays: result?.expiresInDays ?? 0, url });
     return `https://wa.me/?text=${encodeURIComponent(message)}`;
   }
