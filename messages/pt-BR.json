@@ -129,7 +129,17 @@
       "thisWeek": "Esta semana:",
       "lastWeek": "Semana passada:",
       "noReplies": "Nenhuma resposta registrada ainda",
-      "noRepliesHint": "Este gráfico é preenchido conforme você responde às mensagens dos clientes."
+      "noRepliesHint": "Este gráfico é preenchido conforme você responde às mensagens dos clientes.",
+      "avgMinutes": "Média de minutos",
+      "dow": {
+        "Mon": "Seg",
+        "Tue": "Ter",
+        "Wed": "Qua",
+        "Thu": "Qui",
+        "Fri": "Sex",
+        "Sat": "Sáb",
+        "Sun": "Dom"
+      }
     },
     "emptyState": {
       "title": "Ainda não há dados suficientes"
@@ -176,7 +186,12 @@
       "selectConversation": "Selecione uma conversa",
       "selectConversationHint": "Escolha uma conversa à esquerda para começar a enviar mensagens",
       "today": "Hoje",
-      "yesterday": "Ontem"
+      "yesterday": "Ontem",
+      "sendFailed": "Falha ao enviar: {reason}",
+      "sendTemplateFailed": "Falha ao enviar o modelo: {reason}",
+      "reactionFailed": "Falha ao reagir: {reason}",
+      "waitForSend": "Aguarde a mensagem terminar de ser enviada",
+      "assignFailed": "Falha ao atualizar a atribuição"
     },
     "sessionTimer": {
       "expired": "Expirada",
@@ -212,7 +227,15 @@
       "send": "Enviar",
       "quickReplyNamePrompt": "Dê um nome a esta resposta rápida:",
       "quickReplySaved": "Salva como resposta rápida.",
-      "quickReplySaveError": "Não foi possível salvar a resposta rápida."
+      "quickReplySaveError": "Não foi possível salvar a resposta rápida.",
+      "aiNotSetUp": "A IA ainda não está configurada — ative em Agentes de IA → Configuração.",
+      "aiNoReply": "O assistente não devolveu uma resposta.",
+      "aiUnreachable": "Não foi possível falar com o assistente de IA.",
+      "uploadFailed": "Falha no envio.",
+      "recordingTooLong": "A gravação é longa demais (mais de 16 MB).",
+      "recordingUnsupported": "Este navegador não permite gravar áudio.",
+      "micDenied": "Acesso ao microfone negado ou indisponível.",
+      "draftFailed": "Não foi possível rascunhar uma resposta."
     },
     "bubble": {
       "photo": "Foto",
@@ -377,7 +400,9 @@
       "dupSimilar": "Já existe um contato com um número muito parecido.",
       "loadingTags": "Carregando tags...",
       "noTagsAvailable": "Nenhuma tag disponível. Crie tags em Configurações.",
-      "phoneRequired": "O telefone é obrigatório"
+      "phoneRequired": "O telefone é obrigatório",
+      "notAuthenticated": "Não autenticado",
+      "notLinked": "Seu perfil não está vinculado a uma conta."
     },
     "detailView": {
       "tabs": {
@@ -482,7 +507,9 @@
       "toastSkipped_plural": "{count} duplicados ignorados",
       "toastFailed": "{count} contato não pôde ser importado",
       "toastFailed_plural": "{count} contatos não puderam ser importados",
-      "toastError": "Falha na importação"
+      "toastError": "Falha na importação",
+      "notAuthenticated": "Não autenticado",
+      "notLinked": "Seu perfil não está vinculado a uma conta."
     },
     "customFields": {
       "title": "Campos personalizados",
@@ -614,6 +641,16 @@
       "lostThisMonth": "Perdidos este mês",
       "lostThisMonthTooltip": "Negócios marcados como Perdido desde o primeiro dia do mês atual.",
       "howCalculated": "Como {label} é calculado"
+    },
+    "defaults": {
+      "pipelineName": "Funil de vendas",
+      "stages": {
+        "newLead": "Novo lead",
+        "qualified": "Qualificado",
+        "proposalSent": "Proposta enviada",
+        "negotiation": "Negociação",
+        "won": "Ganho"
+      }
     }
   },
   "Broadcasts": {
@@ -693,7 +730,8 @@
       "retryFailed": "Reenviar falhas ({count})",
       "toastResumeStarted": "Enviando para {count} destinatários em segundo plano.",
       "toastResumeStartedCapped": "Enviando para {count} destinatários em segundo plano. Mais {remaining} precisarão de outra rodada.",
-      "toastResumeFailed": "Não foi possível retomar: {error}"
+      "toastResumeFailed": "Não foi possível retomar: {error}",
+      "unknownError": "Erro desconhecido"
     },
     "new": {
       "title": "Novo disparo",
@@ -708,7 +746,8 @@
       "toastNotSignedIn": "Você não está conectado.",
       "toastNotLinked": "Seu perfil não está vinculado a uma conta.",
       "toastFailedDraft": "Falha ao salvar o rascunho: {error}",
-      "toastDraftSaved": "Rascunho salvo"
+      "toastDraftSaved": "Rascunho salvo",
+      "broadcastFailed": "Falha no disparo"
     },
     "wizard": {
       "next": "Próximo",
@@ -754,7 +793,11 @@
         "errorLoadTags": "Falha ao carregar as tags",
         "errorLoadFields": "Falha ao carregar os campos personalizados",
         "errorCsvParse": "Não foi possível ler o arquivo CSV.",
-        "errorCsvMissingPhone": "O CSV precisa ter a coluna 'phone'."
+        "errorCsvMissingPhone": "O CSV precisa ter a coluna 'phone'.",
+        "summary": "Resumo do público",
+        "calculating": "Calculando…",
+        "estimated": "destinatários estimados",
+        "selectToEstimate": "Escolha um tipo de público para ver a estimativa."
       },
       "personalize": {
         "title": "Personalizar variáveis",
@@ -781,7 +824,15 @@
           "name": "Nome",
           "phone": "Telefone",
           "email": "E-mail"
-        }
+        },
+        "mediaRequired": "Este modelo precisa de uma URL de mídia para ser enviado.",
+        "invalidUrl": "Digite uma URL http(s) válida.",
+        "noCustomFields": "Nenhum campo personalizado",
+        "selectCustomFieldAlt": "Selecione o campo personalizado…",
+        "valuePlaceholder": "Digite o valor...",
+        "headerPreviewAlt": "Prévia do cabeçalho",
+        "unmapped": "Associe todas as variáveis antes de continuar — ainda faltam <mono>{keys}</mono>. Caso contrário, elas vão para a Meta em branco.",
+        "loading": "Carregando…"
       },
       "scheduleSend": {
         "title": "Revisar e enviar",
@@ -802,7 +853,11 @@
         "sending": "Enviando...",
         "preparing": "Preparando...",
         "progressDesc": "Processando {current} de {total} destinatários...",
-        "toastFailedPreview": "Falha ao carregar os dados da pré-visualização"
+        "toastFailedPreview": "Falha ao carregar os dados da pré-visualização",
+        "estimatedReach": "Alcance estimado",
+        "language": "Idioma",
+        "confirmTitle": "Confirmar disparo",
+        "confirmDesc": "Você está prestes a enviar este disparo para <b>{count}</b> contatos usando o modelo <b>{template}</b>. Esta ação não pode ser desfeita."
       }
     }
   },
@@ -835,7 +890,8 @@
         "updateError": "Falha ao atualizar",
         "duplicateError": "Falha ao duplicar",
         "deleteError": "Falha ao excluir"
-      }
+      },
+      "loadFailed": "Falha ao carregar as automações"
     },
     "edit": {
       "loading": "Carregando...",
@@ -1014,6 +1070,38 @@
         "matchWordHint": "Corresponde à palavra-chave só como palavra isolada, então \"ok\" não dispara mais em \"tokens\". Ideal para palavras-chave curtas em idiomas separados por espaço; use Contém para idiomas escritos sem espaços.",
         "matchExact": "Exata",
         "closeConversationHint": "Define o status da conversa como \"fechada\". Não precisa de configuração."
+      },
+      "cronPlaceholder": "Expressão cron ou HH:mm"
+    },
+    "templates": {
+      "welcome_message": {
+        "name": "Mensagem de boas-vindas",
+        "description": "Responde automaticamente quem fala com você pela primeira vez com uma saudação.",
+        "steps": {
+          "0": "Olá! 👋 Obrigado pelo contato. Já já respondemos você."
+        }
+      },
+      "out_of_office": {
+        "name": "Fora do horário",
+        "description": "Responde automaticamente fora do horário para ninguém ficar esperando.",
+        "steps": {
+          "1": "Obrigado pela mensagem! Nossa equipe está fora do horário agora (9h–18h) e vai responder logo cedo amanhã."
+        }
+      },
+      "lead_qualifier": {
+        "name": "Qualificador de leads",
+        "description": "Faz perguntas de qualificação para filtrar os leads que chegam.",
+        "keywords": "preço, orçamento, comprar",
+        "steps": {
+          "0": "Ótimo — vamos te ajudar com o preço! Uma pergunta rápida: para quantas pessoas, mais ou menos, você precisa?"
+        }
+      },
+      "follow_up_reminder": {
+        "name": "Lembrete de retorno",
+        "description": "Envia um lembrete se o contato não responder em 24 horas.",
+        "steps": {
+          "1": "Passando para saber — ficou alguma dúvida? Estamos à disposição!"
+        }
       }
     }
   },
@@ -1158,7 +1246,14 @@
         "filenamePlaceholder": "fatura.pdf",
         "advanceAfterSending": "Depois de enviar, avançar para",
         "pickNextNode": "Escolha o próximo bloco…",
-        "none": "— Nenhum —"
+        "none": "— Nenhum —",
+        "removeSection": "Remover seção",
+        "fileUploaded": "Arquivo enviado.",
+        "fieldName": "nome",
+        "fieldEmail": "e-mail",
+        "fieldPhone": "telefone",
+        "fieldCompany": "empresa",
+        "uploadFailed": "Falha no envio."
       },
       "categories": {
         "messaging": "Mensagens",
@@ -1218,7 +1313,13 @@
       "fixIssues": "Corrija os problemas abaixo antes de ativar.",
       "statusActivated": "Fluxo ativado.",
       "statusArchived": "Arquivado.",
-      "statusDraft": "Salvo como rascunho."
+      "statusDraft": "Salvo como rascunho.",
+      "defaultYes": "Sim",
+      "defaultViewOptions": "Ver opções",
+      "defaultOption1": "Opção 1",
+      "saveFailed": "Falha ao salvar",
+      "statusUpdateFailed": "Falha ao atualizar o status",
+      "deleteFailed": "Falha ao excluir"
     },
     "summary": {
       "options": "{count} {count, plural, =1 {opção} other {opções}}",
@@ -1237,6 +1338,23 @@
       "modeRemove": "Remover",
       "tagPicked": "{mode} tag {tag}…",
       "tagNone": "{mode} tag (nenhuma escolhida)"
+    },
+    "header": {
+      "back": "Voltar para Fluxos",
+      "name": "Nome do fluxo",
+      "unsaved": "Alterações não salvas — clique em Salvar para guardar",
+      "edited": "Editado",
+      "runs": "Execuções",
+      "delete": "Excluir",
+      "pause": "Pausar",
+      "fixIssues": "Corrija os problemas abaixo antes de ativar",
+      "activate": "Ativar",
+      "save": "Salvar",
+      "descPlaceholder": "Adicione uma descrição curta (interna — os clientes não veem)",
+      "descLabel": "Descrição do fluxo",
+      "statusDraft": "Rascunho",
+      "statusActive": "Ativo",
+      "statusArchived": "Arquivado"
     }
   },
   "Settings": {
@@ -1288,7 +1406,14 @@
       "removeDialogDesc": "Remover <bold>{name}</bold> da conta? A pessoa será desconectada desta conta e receberá uma nova conta pessoal no próximo login. O login dela não é excluído.",
       "cancel": "Cancelar",
       "removing": "Removendo...",
-      "removeBtn": "Remover membro"
+      "removeBtn": "Remover membro",
+      "loadMembersFailed": "Falha ao carregar os membros",
+      "loadInvitesFailed": "Falha ao carregar os convites",
+      "serverUnreachable": "Não foi possível conectar ao servidor",
+      "updateRoleFailed": "Falha ao atualizar a função",
+      "removeFailed": "Falha ao remover o membro",
+      "revokeFailed": "Falha ao revogar o convite",
+      "memberAlt": "Membro"
     },
     "invite": {
       "inviteCreated": "Convite criado",
@@ -1316,7 +1441,9 @@
       "labelTooLong": "A identificação deve ter no máximo {max} caracteres",
       "copied": "Link do convite copiado",
       "clipboardBlocked": "Área de transferência bloqueada — copie o link manualmente",
-      "whatsappMessage": "Entre em {accountName} no ASKAN CRM usando este link (válido por {expiresInDays} dias): {url}"
+      "whatsappMessage": "Entre em {accountName} no ASKAN CRM usando este link (válido por {expiresInDays} dias): {url}",
+      "createFailed": "Falha ao criar o convite",
+      "serverUnreachable": "Não foi possível conectar ao servidor. Tentar de novo?"
     },
     "tagsAndFields": {
       "title": "Campos e tags",
@@ -1447,7 +1574,9 @@
       "toastInvalidImage": "A imagem do cabeçalho deve ser JPEG ou PNG.",
       "toastImageTooLarge": "A imagem tem {size} MB — o limite da Meta é 5 MB.",
       "toastUploadSuccess": "Imagem enviada.",
-      "toastUploadFailed": "Falha no envio."
+      "toastUploadFailed": "Falha no envio.",
+      "qualityScore": "Nota de qualidade da Meta",
+      "headerSampleAlt": "Exemplo do cabeçalho"
     },
     "roles": {
       "admin": "Administrador",
@@ -1529,7 +1658,27 @@
       "step4_3": "Cole a <strong class=\"text-foreground\">URL de callback do webhook</strong> mostrada acima",
       "step4_4": "Digite o mesmo <strong class=\"text-foreground\">Token de verificação</strong> definido aqui",
       "step4_5": "Assine o campo de webhook \"messages\"",
-      "metaDocs": "Documentação da API do WhatsApp da Meta"
+      "metaDocs": "Documentação da API do WhatsApp da Meta",
+      "loadFailed": "Falha ao carregar a configuração do WhatsApp",
+      "phoneIdRequired": "O ID do número de telefone é obrigatório",
+      "tokenRequired": "O token de acesso é obrigatório na primeira configuração",
+      "reenterToken": "Digite de novo o token de acesso para salvar as alterações",
+      "registrationSkipped": "Credenciais salvas e verificadas. O registro para receber mensagens foi pulado (sem PIN) — veja o status do registro abaixo.",
+      "testFailed": "O teste de conexão falhou. Verifique a rede e tente de novo.",
+      "fullyWired": "Número totalmente conectado — a Meta está entregando os eventos.",
+      "notFullyRegistered": "O número não está totalmente registrado. Veja nas verificações abaixo qual etapa falhou.",
+      "verifyUnreachable": "Não foi possível acessar o endereço de verificação.",
+      "resetConfirm": "Isso vai apagar a configuração atual do WhatsApp para você digitar de novo. Continuar?",
+      "cleared": "Configuração apagada. Agora você pode digitar suas credenciais de novo.",
+      "webhookCopied": "URL do webhook copiada",
+      "saveFailed": "Falha ao salvar a configuração",
+      "resetFailed": "Falha ao redefinir a configuração",
+      "savedRegistrationFailed": "Salvo, mas a Meta não conseguiu registrar o número: {error}",
+      "liveNamed": "Ativo — {name} já pode receber eventos.",
+      "connectedEvents": "WhatsApp conectado. Os eventos começam a chegar em até um minuto.",
+      "connectedTo": "Conectado a {name}",
+      "apiConnectionOk": "Conexão com a API funcionando",
+      "apiConnectionFailed": "Falha na conexão com a API"
     },
     "sections": {
       "overview": "Visão geral",
@@ -1597,7 +1746,8 @@
       "cancel": "Cancelar",
       "signingOut": "Saindo…",
       "signOutEverywhere": "Sair de todos os lugares",
-      "signOutFailed": "Falha ao sair: {message}"
+      "signOutFailed": "Falha ao sair: {message}",
+      "unknownError": "Erro desconhecido"
     },
     "appearance": {
       "title": "Aparência",
@@ -1727,7 +1877,181 @@
       "addDoc": "Adicionar documento",
       "reindex": "Reindexar",
       "reindexTooltip": "Gerar de novo os embeddings de todos os documentos (ex.: depois de adicionar uma chave de embeddings)",
-      "loading": "Carregando…"
+      "loading": "Carregando…",
+      "edit": "Editar",
+      "delete": "Excluir"
+    },
+    "quickReplies": {
+      "nameRequired": "Dê um nome à resposta rápida.",
+      "saveFailed": "Não foi possível salvar a resposta rápida.",
+      "updated": "Resposta rápida atualizada.",
+      "created": "Resposta rápida criada.",
+      "deleteConfirm": "Excluir esta resposta rápida?",
+      "deleteFailed": "Não foi possível excluir a resposta rápida.",
+      "title": "Respostas rápidas",
+      "description": "Trechos reutilizáveis — texto simples ou uma mensagem interativa salva — que os atendentes podem inserir na caixa de entrada.",
+      "new": "Nova resposta rápida",
+      "empty": "Nenhuma resposta rápida ainda. Crie uma para reutilizar nas conversas.",
+      "edit": "Editar resposta rápida",
+      "name": "Nome",
+      "namePlaceholder": "ex.: Horário de atendimento",
+      "kindText": "Texto",
+      "kindInteractive": "Interativa",
+      "textPlaceholder": "O texto da mensagem a inserir",
+      "cancel": "Cancelar",
+      "save": "Salvar"
     }
+  },
+  "Notifications": {
+    "title": "Notificações",
+    "description": "As conversas que seus colegas atribuírem a você aparecem aqui.",
+    "markAllRead": "Marcar todas como lidas",
+    "emptyTitle": "Nenhuma notificação ainda",
+    "emptyDesc": "Você verá um aviso aqui quando alguém atribuir uma conversa a você.",
+    "unread": "Não lida",
+    "retry": "Tentar novamente",
+    "markReadFailed": "Falha ao marcar a notificação como lida",
+    "markAllReadFailed": "Falha ao marcar todas como lidas"
+  },
+  "SignupPage": {
+    "passwordMismatch": "As senhas não conferem",
+    "passwordTooShort": "A senha deve ter pelo menos 6 caracteres",
+    "checkEmail": "Verifique seu e-mail",
+    "backToSignIn": "Voltar para o login",
+    "titleJoin": "Criar conta e entrar",
+    "createAccount": "Criar conta",
+    "descJoin": "Confirme seu e-mail e depois aceite o convite para entrar na sua equipe.",
+    "descDefault": "Comece a usar o ASKAN CRM",
+    "fullName": "Nome completo",
+    "fullNamePlaceholder": "Maria Silva",
+    "email": "E-mail",
+    "password": "Senha",
+    "passwordPlaceholder": "Pelo menos 6 caracteres",
+    "confirmPassword": "Confirme a senha",
+    "confirmPasswordPlaceholder": "Repita sua senha",
+    "creatingAccount": "Criando conta...",
+    "signIn": "Entrar",
+    "checkEmailDesc": "Enviamos um link de confirmação para <email></email>. Verifique sua caixa de entrada e clique no link para confirmar sua conta.",
+    "haveAccount": "Já tem uma conta?"
+  },
+  "ForgotPasswordPage": {
+    "checkEmail": "Verifique seu e-mail",
+    "backToSignIn": "Voltar para o login",
+    "title": "Redefinir senha",
+    "description": "Digite seu e-mail e enviaremos um link para redefinir a senha",
+    "email": "E-mail",
+    "sending": "Enviando...",
+    "sendLink": "Enviar link",
+    "checkEmailDesc": "Enviamos um link para redefinir a senha para <email></email>. Verifique sua caixa de entrada."
+  },
+  "JoinPage": {
+    "conflictDefault": "Você já está em outra conta. Entre com outro e-mail para participar desta.",
+    "acceptFailed": "Falha ao aceitar o convite",
+    "welcome": "Bem-vindo à equipe",
+    "serverUnreachable": "Não foi possível conectar ao servidor",
+    "signOutFailed": "Não foi possível sair. Tente recarregar a página.",
+    "verifying": "Verificando convite…",
+    "tryAgain": "Tentar novamente",
+    "createNewAccount": "Criar uma nova conta",
+    "signIn": "Entrar",
+    "accepting": "Aceitando…",
+    "accept": "Aceitar convite",
+    "stay": "Continuar conectado",
+    "signingOut": "Saindo…",
+    "signOutRetry": "Sair e usar outro e-mail",
+    "createAndJoin": "Criar conta e entrar",
+    "haveAccount": "Já tenho uma conta",
+    "fail": {
+      "not_found": {
+        "title": "Convite não encontrado",
+        "body": "Este link não corresponde a um convite válido. Confira o endereço ou peça para quem convidou você enviar um novo."
+      },
+      "used": {
+        "title": "Convite já usado",
+        "body": "Este convite já foi aceito. Se não foi você, peça ao administrador da conta um novo link."
+      },
+      "expired": {
+        "title": "Convite expirado",
+        "body": "Este convite expirou. Peça ao administrador da conta um novo — leva só alguns segundos para gerar."
+      },
+      "server_error": {
+        "title": "Algo deu errado",
+        "body": "Não conseguimos verificar este convite agora. Tente recarregar a página em instantes."
+      }
+    },
+    "role": {
+      "owner": "Proprietário",
+      "admin": "Administrador",
+      "agent": "Atendente",
+      "viewer": "Leitor"
+    },
+    "invitedTo": "Você foi convidado para <account></account>",
+    "joinAs": "Você entrará como",
+    "linkValidUntil": ". Link válido até",
+    "acceptHint": "Ao aceitar, seu login passa para <account></account>. A conta pessoal vazia criada no cadastro será removida.",
+    "conflictTitle": "Não é possível entrar em {account} com esta conta",
+    "conflictHint": "Para entrar em <account></account>, saia e cadastre-se de novo com outro e-mail. O link do convite continua válido enquanto não expirar."
+  },
+  "AgentsPage": {
+    "title": "Agentes de IA",
+    "tabPlayground": "Playground",
+    "tabSetup": "Configuração",
+    "tabUsage": "Uso",
+    "description": "Seu agente de IA com a sua própria chave — configure e teste no Playground antes de ele responder clientes na caixa de entrada."
+  },
+  "Common": {
+    "loading": "Carregando..."
+  },
+  "AiPlayground": {
+    "notConfigured": "Nenhum agente configurado ainda — conclua a Configuração primeiro.",
+    "unreachable": "Não foi possível falar com o agente.",
+    "title": "Playground",
+    "subtitle": "— teste as respostas como se você fosse um cliente",
+    "wouldHandoff": "Aqui passaria para um humano",
+    "placeholder": "Digite uma mensagem de cliente…",
+    "noReply": "Não foi possível obter uma resposta.",
+    "reset": "Limpar",
+    "goToSetup": "Ainda não configurou? Vá para Configuração",
+    "thinking": "Pensando…",
+    "emptyTitle": "Envie uma mensagem para ver como seu agente responderia.",
+    "emptyDesc": "Ele usa sua base de conhecimento e se comporta igual ao robô de resposta automática — inclusive na transferência."
+  },
+  "AiUsage": {
+    "emptyDesc": "Isto é preenchido conforme o assistente rascunha e responde automaticamente.",
+    "totalTokens": "Total de tokens",
+    "llmCalls": "Chamadas ao modelo",
+    "autoReply": "Resposta automática",
+    "drafts": "Rascunhos",
+    "perDay": "Tokens por dia",
+    "byModel": "Por modelo",
+    "loadFailed": "Falha ao carregar o uso",
+    "title": "Uso de tokens",
+    "description": "Tokens gastos na chave do seu provedor pelos rascunhos e pelo robô de resposta automática. Só contagens — nenhum conteúdo de mensagem é guardado aqui.",
+    "lastDays": "Últimos {days} dias",
+    "emptyTitle": "Nenhum uso de IA nos últimos {days} dias.",
+    "modelLine": "{tokens} tok · {calls} {calls, plural, =1 {chamada} other {chamadas}}",
+    "truncated": "Mostrando um período parcial — o uso é alto o suficiente para que só os registros mais recentes sejam resumidos aqui."
+  },
+  "Interactive": {
+    "replyButtons": "Botões de resposta",
+    "list": "Lista",
+    "bodyPlaceholder": "O que o cliente lê acima das opções",
+    "header": "Cabeçalho (opcional)",
+    "footer": "Rodapé (opcional)",
+    "showIds": "Mostrar IDs de resposta (avançado)",
+    "preview": "Pré-visualização",
+    "buttonLabel": "Texto do botão",
+    "addButton": "Adicionar botão",
+    "sectionTitle": "Título da seção (opcional)",
+    "rowTitle": "Título do item",
+    "description": "Descrição (opcional)",
+    "addRow": "Adicionar item",
+    "addSection": "Adicionar seção",
+    "buttonsCount": "Botões ({count}/{max})",
+    "rowsCount": "Itens ({count}/{max})",
+    "body": "Corpo",
+    "listButtonLabel": "Texto do botão da lista",
+    "messageBody": "Corpo da mensagem…",
+    "menu": "Menu"
   }
 }

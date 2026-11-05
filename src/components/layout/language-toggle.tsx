@@ -1,7 +1,6 @@
 "use client";
 
 import { Languages } from "lucide-react";
-import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
@@ -21,13 +20,14 @@ const LOCALE_COOKIE = "NEXT_LOCALE";
 export function LanguageToggle({ className }: { className?: string }) {
   const t = useTranslations("LanguageToggle");
   const locale = useLocale();
-  const router = useRouter();
   const goingTo = locale === "pt-BR" ? "en" : "pt-BR";
   const switchLabel = t("switchTo", { language: goingTo === "en" ? "English" : "Português" });
 
   const switchLocale = () => {
     document.cookie = `${LOCALE_COOKIE}=${goingTo}; path=/; max-age=31536000; samesite=lax`;
-    router.refresh();
+    // Full reload (not router.refresh) so every cached page and
+    // client-side date formatting pick up the new language at once.
+    window.location.reload();
   };
 
   return (
