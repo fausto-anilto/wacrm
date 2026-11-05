@@ -24,7 +24,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Badge } from '@/components/ui/badge';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { Card, CardContent } from '@/components/ui/card';
 import { SettingsPanelHead } from './settings-panel-head';
 import {
@@ -126,6 +126,8 @@ function emptyButton(type: TemplateButton['type']): TemplateButton {
 
 export function TemplateManager() {
   const t = useTranslations('Settings.templates');
+  // New templates default to the UI language (pt_BR for Portuguese users).
+  const defaultLanguage = useLocale() === 'pt-BR' ? 'pt_BR' : 'en_US';
   const supabase = createClient();
   const { user, loading: authLoading } = useAuth();
 
@@ -253,7 +255,7 @@ export function TemplateManager() {
 
   function openCreate() {
     setEditingId(null);
-    setForm(emptyForm);
+    setForm({ ...emptyForm, language: defaultLanguage });
     setDialogOpen(true);
   }
 
@@ -547,7 +549,7 @@ export function TemplateManager() {
                                 ? 'text-yellow-400'
                                 : 'text-red-400'
                           }`}
-                          title="Meta quality score"
+                          title={t('qualityScore')}
                         >
                           {template.quality_score}
                         </span>
@@ -687,7 +689,7 @@ export function TemplateManager() {
                   }
                 >
                   <SelectTrigger className="w-full bg-muted border-border text-foreground">
-                    <SelectValue />
+                    <SelectValue>{(v: string) => t(`categories.${v}` as 'categories.Marketing')}</SelectValue>
                   </SelectTrigger>
                   <SelectContent className="bg-popover border-border">
                     {CATEGORIES.map((cat) => (
@@ -696,7 +698,7 @@ export function TemplateManager() {
                         value={cat}
                         className="text-popover-foreground focus:bg-muted focus:text-popover-foreground"
                       >
-                        {cat}
+                        {t(`categories.${cat}`)}
                       </SelectItem>
                     ))}
                   </SelectContent>
@@ -707,7 +709,7 @@ export function TemplateManager() {
                 <Label className="text-muted-foreground">{t('language')}</Label>
                 <Input
                   list="template-language-codes"
-                  placeholder="en_US"
+                  placeholder={defaultLanguage}
                   value={form.language}
                   onChange={(e) =>
                     setForm({ ...form, language: e.target.value })
@@ -748,7 +750,7 @@ export function TemplateManager() {
                 }
               >
                 <SelectTrigger className="w-full bg-muted border-border text-foreground">
-                  <SelectValue />
+                  <SelectValue>{(v: string) => v === 'text' ? t('headerText') : v === 'image' ? t('headerImage') : v === 'video' ? t('headerVideo') : v === 'document' ? t('headerDocument') : t('headerNone')}</SelectValue>
                 </SelectTrigger>
                 <SelectContent className="bg-popover border-border">
                   {HEADER_FORMATS.map((type) => (
@@ -845,7 +847,7 @@ export function TemplateManager() {
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={form.header_media_url}
-                      alt="Header sample"
+                      alt={t('headerSampleAlt')}
                       className="max-h-28 rounded-md border border-border object-contain"
                     />
                   )}
@@ -956,7 +958,7 @@ export function TemplateManager() {
                           }}
                         >
                           <SelectTrigger className="w-40 bg-muted border-border text-foreground h-8 text-xs">
-                            <SelectValue />
+                            <SelectValue>{(v: string) => v === 'URL' ? t('btnUrl') : v === 'PHONE_NUMBER' ? t('btnPhone') : v === 'COPY_CODE' ? t('btnCopyCode') : t('btnQuickReply')}</SelectValue>
                           </SelectTrigger>
                           <SelectContent className="bg-popover border-border">
                             <SelectItem

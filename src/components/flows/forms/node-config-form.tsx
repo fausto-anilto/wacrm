@@ -456,7 +456,7 @@ function SendListForm({
   return (
     <>
       <TextRow
-        label="Body text"
+        label={t("bodyText")}
         value={cfg.text ?? ""}
         onChange={(v) => onUpdateConfig({ text: v })}
         rows={3}
@@ -498,7 +498,7 @@ function SendListForm({
                   size="sm"
                   onClick={() => removeSection(sIdx)}
                   className="shrink-0 text-red-400 hover:bg-red-500/10 hover:text-red-300"
-                  aria-label="Remove section"
+                  aria-label={t("removeSection")}
                 >
                   <Trash2 className="h-3.5 w-3.5" />
                 </Button>
@@ -634,7 +634,7 @@ function ConditionForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => v === "tag" ? t("contactHasTag") : v === "contact_field" ? t("contactField") : t("capturedVariable")}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="var">{t("capturedVariable")}</SelectItem>
@@ -657,7 +657,7 @@ function ConditionForm({
               onValueChange={(v) => onUpdateConfig({ subject_key: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder="Pick a tag…" />
+                <SelectValue>{(v: string) => tags.find((tag) => tag.id === v)?.name ?? t("pickTag")}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {tags.map((t) => (
@@ -673,13 +673,13 @@ function ConditionForm({
               onValueChange={(v) => onUpdateConfig({ subject_key: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder={t("pickField")} />
+                <SelectValue>{(v: string) => ({ name: t("fieldName"), email: t("fieldEmail"), phone: t("fieldPhone"), company: t("fieldCompany") } as Record<string, string>)[v] ?? (v || t("pickField"))}</SelectValue>
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="name">name</SelectItem>
-                <SelectItem value="email">email</SelectItem>
-                <SelectItem value="phone">phone</SelectItem>
-                <SelectItem value="company">company</SelectItem>
+                <SelectItem value="name">{t("fieldName")}</SelectItem>
+                <SelectItem value="email">{t("fieldEmail")}</SelectItem>
+                <SelectItem value="phone">{t("fieldPhone")}</SelectItem>
+                <SelectItem value="company">{t("fieldCompany")}</SelectItem>
               </SelectContent>
             </Select>
           ) : (
@@ -710,7 +710,7 @@ function ConditionForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => ({ present: t("isPresent"), absent: t("isAbsent"), equals: t("equals"), contains: t("contains") } as Record<string, string>)[v] ?? v}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="present">{t("isPresent")}</SelectItem>
@@ -789,7 +789,7 @@ function SetTagForm({
             }
           >
             <SelectTrigger className="bg-muted">
-              <SelectValue />
+              <SelectValue>{(v: string) => (v === "remove" ? t("removeTag") : t("addTag"))}</SelectValue>
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="add">{t("addTag")}</SelectItem>
@@ -805,7 +805,7 @@ function SetTagForm({
               onValueChange={(v) => onUpdateConfig({ tag_id: v })}
             >
               <SelectTrigger className="bg-muted">
-                <SelectValue placeholder="Pick a tag…" />
+                <SelectValue>{(v: string) => tags.find((tag) => tag.id === v)?.name ?? t("pickTag")}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {tags.map((t) => (
@@ -928,15 +928,15 @@ function SendMediaForm({
           media_url: publicUrl,
           filename: file.name,
         });
-        toast.success("File uploaded.");
+        toast.success(t("fileUploaded"));
       } catch (err) {
-        const msg = err instanceof Error ? err.message : "Upload failed.";
+        const msg = err instanceof Error ? err.message : t("uploadFailed");
         toast.error(msg);
       } finally {
         setUploading(false);
       }
     },
-    [onUpdateConfig],
+    [onUpdateConfig, t],
   );
 
   const handleClear = () => {
@@ -961,7 +961,7 @@ function SendMediaForm({
           }}
         >
           <SelectTrigger className="bg-muted">
-            <SelectValue />
+            <SelectValue>{(v: string) => v === "video" ? t("videoLabel") : v === "document" ? t("documentLabel") : t("imageLabel")}</SelectValue>
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="image">{t("imageLabel")}</SelectItem>

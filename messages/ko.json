@@ -129,7 +129,17 @@
       "thisWeek": "이번 주:",
       "lastWeek": "지난 주:",
       "noReplies": "아직 기록된 응답이 없습니다",
-      "noRepliesHint": "고객 메시지에 답변하면 이 차트가 채워집니다."
+      "noRepliesHint": "고객 메시지에 답변하면 이 차트가 채워집니다.",
+      "avgMinutes": "Avg minutes",
+      "dow": {
+        "Mon": "Mon",
+        "Tue": "Tue",
+        "Wed": "Wed",
+        "Thu": "Thu",
+        "Fri": "Fri",
+        "Sat": "Sat",
+        "Sun": "Sun"
+      }
     },
     "emptyState": {
       "title": "아직 데이터가 충분하지 않습니다"
@@ -176,7 +186,12 @@
       "selectConversation": "대화를 선택하세요",
       "selectConversationHint": "왼쪽에서 대화를 선택해 메시지를 시작하세요",
       "today": "오늘",
-      "yesterday": "어제"
+      "yesterday": "어제",
+      "sendFailed": "Failed to send: {reason}",
+      "sendTemplateFailed": "Failed to send template: {reason}",
+      "reactionFailed": "Reaction failed: {reason}",
+      "waitForSend": "Wait for the message to finish sending",
+      "assignFailed": "Failed to update assignment"
     },
     "sessionTimer": {
       "expired": "만료됨",
@@ -212,7 +227,15 @@
       "send": "보내기",
       "quickReplyNamePrompt": "이 빠른 답장의 이름을 지정하세요:",
       "quickReplySaved": "빠른 답장으로 저장되었습니다.",
-      "quickReplySaveError": "빠른 답장을 저장하지 못했습니다."
+      "quickReplySaveError": "빠른 답장을 저장하지 못했습니다.",
+      "aiNotSetUp": "AI isn't set up yet — enable it in Settings → AI Assistant.",
+      "aiNoReply": "The assistant didn't return a reply.",
+      "aiUnreachable": "Couldn't reach the AI assistant.",
+      "uploadFailed": "Upload failed.",
+      "recordingTooLong": "Recording is too long (over 16 MB).",
+      "recordingUnsupported": "Voice recording isn't supported in this browser.",
+      "micDenied": "Microphone access denied or unavailable.",
+      "draftFailed": "Couldn't draft a reply."
     },
     "bubble": {
       "photo": "사진",
@@ -377,7 +400,9 @@
       "dupSimilar": "매우 유사한 번호를 가진 연락처가 이미 있습니다.",
       "loadingTags": "태그를 불러오는 중...",
       "noTagsAvailable": "사용 가능한 태그가 없습니다. 설정에서 태그를 만드세요.",
-      "phoneRequired": "전화번호는 필수입니다"
+      "phoneRequired": "전화번호는 필수입니다",
+      "notAuthenticated": "Not authenticated",
+      "notLinked": "Your profile is not linked to an account."
     },
     "detailView": {
       "tabs": {
@@ -482,7 +507,9 @@
       "toastSkipped_plural": "중복 {count}건을 건너뛰었습니다",
       "toastFailed": "연락처 {count}개를 가져오지 못했습니다",
       "toastFailed_plural": "연락처 {count}개를 가져오지 못했습니다",
-      "toastError": "가져오기 실패"
+      "toastError": "가져오기 실패",
+      "notAuthenticated": "Not authenticated",
+      "notLinked": "Your profile is not linked to an account."
     },
     "customFields": {
       "title": "커스텀 필드",
@@ -614,6 +641,16 @@
       "lostThisMonth": "이번 달 실패",
       "lostThisMonthTooltip": "이번 달 1일 이후 실패로 표시된 딜입니다.",
       "howCalculated": "{label} 계산 방법"
+    },
+    "defaults": {
+      "pipelineName": "Sales Pipeline",
+      "stages": {
+        "newLead": "New Lead",
+        "qualified": "Qualified",
+        "proposalSent": "Proposal Sent",
+        "negotiation": "Negotiation",
+        "won": "Won"
+      }
     }
   },
   "Broadcasts": {
@@ -693,7 +730,8 @@
       "retryFailed": "실패 재시도 ({count})",
       "toastResumeStarted": "{count}명에게 백그라운드로 발송 중입니다.",
       "toastResumeStartedCapped": "{count}명에게 백그라운드로 발송 중입니다. 나머지 {remaining}명은 한 번 더 실행해야 합니다.",
-      "toastResumeFailed": "이어서 발송할 수 없습니다: {error}"
+      "toastResumeFailed": "이어서 발송할 수 없습니다: {error}",
+      "unknownError": "Unknown error"
     },
     "new": {
       "title": "새 브로드캐스트",
@@ -708,7 +746,8 @@
       "toastNotSignedIn": "로그인되어 있지 않습니다.",
       "toastNotLinked": "프로필이 계정에 연결되어 있지 않습니다.",
       "toastFailedDraft": "초안 저장 실패: {error}",
-      "toastDraftSaved": "초안이 저장되었습니다"
+      "toastDraftSaved": "초안이 저장되었습니다",
+      "broadcastFailed": "Broadcast failed"
     },
     "wizard": {
       "next": "다음",
@@ -754,7 +793,11 @@
         "errorLoadTags": "태그를 불러오지 못했습니다",
         "errorLoadFields": "커스텀 필드를 불러오지 못했습니다",
         "errorCsvParse": "CSV 파일을 파싱할 수 없습니다.",
-        "errorCsvMissingPhone": "CSV에 'phone' 열이 있어야 합니다."
+        "errorCsvMissingPhone": "CSV에 'phone' 열이 있어야 합니다.",
+        "summary": "Audience Summary",
+        "calculating": "Calculating…",
+        "estimated": "estimated recipients",
+        "selectToEstimate": "Select an audience type to see the estimate."
       },
       "personalize": {
         "title": "변수 개인화",
@@ -781,7 +824,15 @@
           "name": "이름",
           "phone": "전화번호",
           "email": "이메일"
-        }
+        },
+        "mediaRequired": "A media URL is required to send this template.",
+        "invalidUrl": "Enter a valid http(s) URL.",
+        "noCustomFields": "No custom fields",
+        "selectCustomFieldAlt": "Select custom field…",
+        "valuePlaceholder": "Enter value...",
+        "headerPreviewAlt": "Header preview",
+        "unmapped": "Map every placeholder before continuing — still missing <mono>{keys}</mono>. Otherwise those placeholders will ship to Meta as empty strings.",
+        "loading": "Loading…"
       },
       "scheduleSend": {
         "title": "검토 및 전송",
@@ -802,7 +853,11 @@
         "sending": "전송 중...",
         "preparing": "준비 중...",
         "progressDesc": "수신자 {total}명 중 {current}명 처리 중...",
-        "toastFailedPreview": "미리보기 데이터를 불러오지 못했습니다"
+        "toastFailedPreview": "미리보기 데이터를 불러오지 못했습니다",
+        "estimatedReach": "Estimated Reach",
+        "language": "Language",
+        "confirmTitle": "Confirm Broadcast",
+        "confirmDesc": "You are about to send this broadcast to <b>{count}</b> contacts using the <b>{template}</b> template. This action cannot be undone."
       }
     }
   },
@@ -835,7 +890,8 @@
         "updateError": "업데이트하지 못했습니다",
         "duplicateError": "복제하지 못했습니다",
         "deleteError": "삭제하지 못했습니다"
-      }
+      },
+      "loadFailed": "Failed to load automations"
     },
     "edit": {
       "loading": "불러오는 중...",
@@ -1014,6 +1070,38 @@
         "matchWordHint": "키워드가 독립된 단어일 때만 일치하므로 \"k\"가 \"thanks\"에서 실행되지 않습니다. 공백으로 단어를 구분하는 언어의 짧은 키워드에 적합하며, 공백 없이 표기하는 언어에는 \"포함\"을 사용하세요.",
         "matchExact": "정확히 일치",
         "closeConversationHint": "대화 상태를 \"닫힘\"으로 설정합니다. 추가 설정이 필요 없습니다."
+      },
+      "cronPlaceholder": "Cron expression or HH:mm"
+    },
+    "templates": {
+      "welcome_message": {
+        "name": "Welcome Message",
+        "description": "Auto-reply to first-time contacts with a greeting.",
+        "steps": {
+          "0": "Hi! 👋 Thanks for reaching out. We'll get back to you shortly."
+        }
+      },
+      "out_of_office": {
+        "name": "Out of Office",
+        "description": "Auto-reply during off-hours so nobody is left waiting.",
+        "steps": {
+          "1": "Thanks for your message! Our team is offline right now (9am–6pm) and will reply first thing tomorrow."
+        }
+      },
+      "lead_qualifier": {
+        "name": "Lead Qualifier",
+        "description": "Ask qualification questions to filter inbound leads.",
+        "keywords": "pricing, quote, buy",
+        "steps": {
+          "0": "Great — happy to help with pricing! Quick question: roughly how many seats are you looking for?"
+        }
+      },
+      "follow_up_reminder": {
+        "name": "Follow-up Reminder",
+        "description": "Send a nudge if a contact has not replied within 24 hours.",
+        "steps": {
+          "1": "Just circling back — did you have any other questions for us? Happy to help!"
+        }
       }
     }
   },
@@ -1158,7 +1246,14 @@
         "filenamePlaceholder": "invoice.pdf",
         "advanceAfterSending": "전송 후 다음 진행",
         "pickNextNode": "다음 노드를 선택하세요…",
-        "none": "— 없음 —"
+        "none": "— 없음 —",
+        "removeSection": "Remove section",
+        "fileUploaded": "File uploaded.",
+        "fieldName": "name",
+        "fieldEmail": "email",
+        "fieldPhone": "phone",
+        "fieldCompany": "company",
+        "uploadFailed": "Upload failed."
       },
       "categories": {
         "messaging": "메시징",
@@ -1218,7 +1313,13 @@
       "fixIssues": "활성화하기 전에 아래 문제를 해결하세요.",
       "statusActivated": "플로우가 활성화되었습니다.",
       "statusArchived": "보관되었습니다.",
-      "statusDraft": "초안으로 저장되었습니다."
+      "statusDraft": "초안으로 저장되었습니다.",
+      "defaultYes": "Yes",
+      "defaultViewOptions": "View options",
+      "defaultOption1": "Option 1",
+      "saveFailed": "Save failed",
+      "statusUpdateFailed": "Status update failed",
+      "deleteFailed": "Delete failed"
     },
     "summary": {
       "options": "옵션 {count}개",
@@ -1237,6 +1338,23 @@
       "modeRemove": "제거",
       "tagPicked": "{tag} 태그 {mode}…",
       "tagNone": "태그 {mode} (선택된 태그 없음)"
+    },
+    "header": {
+      "back": "Back to Flows",
+      "name": "Flow name",
+      "unsaved": "Unsaved changes — hit Save to persist",
+      "edited": "Edited",
+      "runs": "Runs",
+      "delete": "Delete",
+      "pause": "Pause",
+      "fixIssues": "Fix the issues below before activating",
+      "activate": "Activate",
+      "save": "Save",
+      "descPlaceholder": "Add a short description (internal — customers don't see this)",
+      "descLabel": "Flow description",
+      "statusDraft": "Draft",
+      "statusActive": "Active",
+      "statusArchived": "Archived"
     }
   },
   "Settings": {
@@ -1288,7 +1406,14 @@
       "removeDialogDesc": "<bold>{name}</bold>을(를) 이 계정에서 제거하시겠습니까? 이 계정에서 로그아웃되며 다음 로그인 시 새로운 개인 계정이 발급됩니다. 로그인 정보 자체는 삭제되지 않습니다.",
       "cancel": "취소",
       "removing": "제거 중...",
-      "removeBtn": "멤버 제거"
+      "removeBtn": "멤버 제거",
+      "loadMembersFailed": "Failed to load members",
+      "loadInvitesFailed": "Failed to load invitations",
+      "serverUnreachable": "Could not reach the server",
+      "updateRoleFailed": "Failed to update role",
+      "removeFailed": "Failed to remove member",
+      "revokeFailed": "Failed to revoke invitation",
+      "memberAlt": "Member"
     },
     "invite": {
       "inviteCreated": "초대가 생성되었습니다",
@@ -1316,7 +1441,9 @@
       "labelTooLong": "라벨은 {max}자 이하여야 합니다",
       "copied": "초대 링크가 복사되었습니다",
       "clipboardBlocked": "클립보드 접근이 차단되었습니다 — 링크를 직접 복사하세요",
-      "whatsappMessage": "이 링크(유효 기간 {expiresInDays}일)로 ASKAN CRM의 {accountName}에 참여하세요: {url}"
+      "whatsappMessage": "이 링크(유효 기간 {expiresInDays}일)로 ASKAN CRM의 {accountName}에 참여하세요: {url}",
+      "createFailed": "Failed to create invitation",
+      "serverUnreachable": "Could not reach the server. Try again?"
     },
     "tagsAndFields": {
       "title": "필드 & 태그",
@@ -1372,13 +1499,11 @@
       "deleteLocallyAria": "로컬에서 템플릿 삭제",
       "deleteMetaLocallyTitle": "Meta와 로컬에서 삭제",
       "deleteLocallyTitle": "로컬에서 삭제",
-
       "dialogEditTitle": "메시지 템플릿 수정",
       "dialogNewTitle": "새 메시지 템플릿",
       "dialogEditDesc": "변경 사항을 저장해 Meta에 재제출하세요. 검토 중에는 상태가 다시 대기 중으로 바뀝니다.",
       "dialogNewDesc": "템플릿을 만들어 Meta 승인을 요청하세요. 승인되면 브로드캐스트와 인박스에서 사용할 수 있습니다.",
       "authWarning": "AUTHENTICATION 템플릿은 본문과 OTP 버튼 형식이 고정되어 있어 별도의 빌더가 필요합니다. 지금은 Meta WhatsApp 관리자에서 만든 뒤 <bold>Meta에서 동기화</bold>로 가져오세요.",
-
       "templateName": "템플릿 이름",
       "namePlaceholder": "예: order_confirmation",
       "nameFixed": "템플릿이 Meta에 존재하면 이름이 고정됩니다 — 변경하려면 새 템플릿을 만드세요.",
@@ -1387,7 +1512,6 @@
       "language": "언어",
       "langFixed": "템플릿이 Meta에 존재하면 언어가 고정됩니다.",
       "langHint": "Meta의 정확한 코드와 일치해야 합니다 — <code>en_US</code>와 <code>en</code>은 다른 코드입니다.",
-
       "header": "헤더",
       "headerNone": "없음",
       "headerText": "텍스트",
@@ -1397,7 +1521,6 @@
       "headerTextPlaceholder": "헤더 텍스트 (최대 60자, {{1}} 선택 가능)",
       "headerSampleAria": "헤더 변수 샘플 값",
       "headerSamplePlaceholder": "{{1}}의 샘플 값 (Meta 검토에 필요)",
-
       "uploadImage": "이미지 업로드",
       "uploadHint": "JPEG 또는 PNG, 5MB 이하",
       "mediaUrlPlaceholder": "https://… (또는 공개 {format} 링크 붙여넣기)",
@@ -1405,17 +1528,14 @@
       "mediaHint": "공개적으로 접근 가능한 HTTPS 링크여야 합니다. Meta가 검토 중 한 번 가져오므로 약 24시간 동안 살아있어야 합니다.",
       "videoHint": " 권장: MP4 / 3GPP, 16MB 이하, 60초 이하.",
       "documentHint": " 권장: PDF, 100MB 이하.",
-
       "bodyText": "본문 텍스트",
       "bodyPlaceholder": "안녕하세요 {{1}}님, 주문 {{2}}이(가) 확정되었습니다.",
       "sampleValues": "샘플 값 (Meta가 템플릿 검토에 사용합니다)",
       "bodyHint": "변수에는 {{1}}, {{2}}를 사용하세요 ({{1}}부터 연속되어야 합니다).",
       "sampleAria": "본문 변수 {var}의 샘플 값",
       "samplePlaceholder": "{var}의 샘플",
-
       "footer": "푸터 (선택)",
       "footerPlaceholder": "선택적 푸터 텍스트 (최대 60자)",
-
       "buttons": "버튼 (선택)",
       "addButton": "버튼 추가",
       "buttonsLimit": "최대 {max}개 버튼. QUICK_REPLY 버튼은 URL / 전화 / 코드 복사 버튼보다 앞에 와야 합니다.",
@@ -1428,19 +1548,16 @@
       "urlSamplePlaceholder": "{{1}}의 예시 값 (URL에 변수가 있을 때 필요)",
       "phonePlaceholder": "+15551234567",
       "codePlaceholder": "예시 코드 (예: SUMMER20)",
-
       "cancel": "취소",
       "saving": "저장 중…",
       "submitting": "제출 중…",
       "saveResubmit": "저장 & 재제출",
       "submitApproval": "승인 요청",
-
       "deleteDialogTitle": "템플릿을 삭제하시겠습니까?",
       "deleteMetaDesc": "\"{name}\"이(가) Meta와 ASKAN CRM에서 삭제됩니다. 이 템플릿을 사용하는 활성 브로드캐스트는 다음 전송부터 실패하기 시작합니다. 되돌릴 수 없습니다.",
       "deleteLocalDesc": "\"{name}\"이(가) ASKAN CRM에서 삭제됩니다. Meta에 제출된 적이 없으므로 별도의 원격 정리가 필요하지 않습니다.",
       "deleting": "삭제 중…",
       "delete": "삭제",
-
       "toastLoadFailed": "템플릿을 불러오지 못했습니다",
       "toastSubmitFailed": "제출하지 못했습니다",
       "toastSubmitEditSuccess": "수정 사항이 제출되었습니다 — Meta는 보통 24시간 이내에 검토합니다.",
@@ -1457,7 +1574,14 @@
       "toastInvalidImage": "헤더 이미지는 JPEG 또는 PNG여야 합니다.",
       "toastImageTooLarge": "이미지 크기가 {size}MB입니다 — Meta 제한은 5MB입니다.",
       "toastUploadSuccess": "이미지가 업로드되었습니다.",
-      "toastUploadFailed": "업로드에 실패했습니다."
+      "toastUploadFailed": "업로드에 실패했습니다.",
+      "qualityScore": "Meta quality score",
+      "headerSampleAlt": "Header sample",
+      "categories": {
+        "Marketing": "Marketing",
+        "Utility": "Utility",
+        "Authentication": "Authentication"
+      }
     },
     "roles": {
       "admin": "관리자",
@@ -1539,7 +1663,27 @@
       "step4_3": "위의 <strong class=\"text-foreground\">웹훅 콜백 URL</strong>을 붙여넣기",
       "step4_4": "여기서 설정한 것과 동일한 <strong class=\"text-foreground\">인증 토큰</strong>을 입력",
       "step4_5": "\"messages\" 웹훅 필드를 구독",
-      "metaDocs": "Meta WhatsApp API 문서"
+      "metaDocs": "Meta WhatsApp API 문서",
+      "loadFailed": "Failed to load WhatsApp configuration",
+      "phoneIdRequired": "Phone Number ID is required",
+      "tokenRequired": "Access Token is required for initial setup",
+      "reenterToken": "Please re-enter the Access Token to save changes",
+      "registrationSkipped": "Credentials saved and verified. Inbound registration was skipped (no PIN) — see Registration status below.",
+      "testFailed": "Connection test failed. Check network and try again.",
+      "fullyWired": "Number is fully wired — Meta is delivering events.",
+      "notFullyRegistered": "Number is not fully registered. See the checks below for which step failed.",
+      "verifyUnreachable": "Could not reach the verification endpoint.",
+      "resetConfirm": "This will delete the current WhatsApp config so you can re-enter it. Continue?",
+      "cleared": "Configuration cleared. You can now re-enter your credentials.",
+      "webhookCopied": "Webhook URL copied to clipboard",
+      "saveFailed": "Failed to save configuration",
+      "resetFailed": "Failed to reset configuration",
+      "savedRegistrationFailed": "Saved, but Meta couldn't register the number: {error}",
+      "liveNamed": "Live — {name} can now receive events.",
+      "connectedEvents": "WhatsApp connected. Events will start flowing within a minute.",
+      "connectedTo": "Connected to {name}",
+      "apiConnectionOk": "API connection successful",
+      "apiConnectionFailed": "API connection failed"
     },
     "sections": {
       "overview": "개요",
@@ -1586,7 +1730,6 @@
       "profileSaved": "프로필이 저장되었습니다",
       "emailChangeFailed": "이메일 변경 실패: {message}",
       "profileSavedEmailCheck": "프로필이 저장되었습니다 — 이메일 주소 변경을 확인하려면 이메일을 확인하세요",
-
       "passwordTitle": "비밀번호",
       "passwordDesc": "최소 {min}자 이상 사용하세요. 변경 후에도 이 기기에서는 로그인이 유지됩니다.",
       "currentPassword": "현재 비밀번호",
@@ -1600,7 +1743,6 @@
       "currentPasswordIncorrect": "현재 비밀번호가 올바르지 않습니다",
       "passwordUpdateFailed": "비밀번호 업데이트 실패: {message}",
       "passwordUpdated": "비밀번호가 업데이트되었습니다",
-
       "sessionsTitle": "활성 세션",
       "sessionsDesc": "이 기기를 포함해 로그인되어 있는 모든 기기에서 로그아웃합니다. 노트북을 분실했거나 비밀번호를 공유한 경우 유용합니다.",
       "signOutAll": "모든 기기에서 로그아웃",
@@ -1609,7 +1751,8 @@
       "cancel": "취소",
       "signingOut": "로그아웃 중…",
       "signOutEverywhere": "모든 곳에서 로그아웃",
-      "signOutFailed": "로그아웃 실패: {message}"
+      "signOutFailed": "로그아웃 실패: {message}",
+      "unknownError": "Unknown error"
     },
     "appearance": {
       "title": "화면 설정",
@@ -1739,7 +1882,181 @@
       "addDoc": "문서 추가",
       "reindex": "재색인",
       "reindexTooltip": "모든 문서를 다시 임베딩합니다 (예: 임베딩 키 추가 후)",
-      "loading": "불러오는 중…"
+      "loading": "불러오는 중…",
+      "edit": "Edit",
+      "delete": "Delete"
+    },
+    "quickReplies": {
+      "nameRequired": "Give the quick reply a name.",
+      "saveFailed": "Couldn't save the quick reply.",
+      "updated": "Quick reply updated.",
+      "created": "Quick reply created.",
+      "deleteConfirm": "Delete this quick reply?",
+      "deleteFailed": "Couldn't delete the quick reply.",
+      "title": "Quick replies",
+      "description": "Reusable snippets — plain text or a saved interactive message — that agents can insert from the inbox composer.",
+      "new": "New quick reply",
+      "empty": "No quick replies yet. Create one to reuse it across conversations.",
+      "edit": "Edit quick reply",
+      "name": "Name",
+      "namePlaceholder": "e.g. Business hours",
+      "kindText": "Text",
+      "kindInteractive": "Interactive",
+      "textPlaceholder": "The message text to insert",
+      "cancel": "Cancel",
+      "save": "Save"
     }
+  },
+  "Notifications": {
+    "title": "Notifications",
+    "description": "Conversations other teammates assign to you show up here.",
+    "markAllRead": "Mark all as read",
+    "emptyTitle": "No notifications yet",
+    "emptyDesc": "You'll see an alert here when someone assigns you a conversation.",
+    "unread": "Unread",
+    "retry": "Retry",
+    "markReadFailed": "Failed to mark notification as read",
+    "markAllReadFailed": "Failed to mark all as read"
+  },
+  "SignupPage": {
+    "passwordMismatch": "Passwords do not match",
+    "passwordTooShort": "Password must be at least 6 characters",
+    "checkEmail": "Check your email",
+    "backToSignIn": "Back to sign in",
+    "titleJoin": "Create account & join",
+    "createAccount": "Create account",
+    "descJoin": "Verify your email, then accept the invitation to join your team.",
+    "descDefault": "Get started with ASKAN CRM",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "John Doe",
+    "email": "Email",
+    "password": "Password",
+    "passwordPlaceholder": "At least 6 characters",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Repeat your password",
+    "creatingAccount": "Creating account...",
+    "signIn": "Sign in",
+    "checkEmailDesc": "We've sent a confirmation link to <email></email>. Please check your inbox and click the link to verify your account.",
+    "haveAccount": "Already have an account?"
+  },
+  "ForgotPasswordPage": {
+    "checkEmail": "Check your email",
+    "backToSignIn": "Back to sign in",
+    "title": "Reset password",
+    "description": "Enter your email and we'll send you a reset link",
+    "email": "Email",
+    "sending": "Sending...",
+    "sendLink": "Send reset link",
+    "checkEmailDesc": "We've sent a password reset link to <email></email>. Please check your inbox."
+  },
+  "JoinPage": {
+    "conflictDefault": "You are already in another account. Sign in with a different email to join this one.",
+    "acceptFailed": "Failed to accept invitation",
+    "welcome": "Welcome to the team",
+    "serverUnreachable": "Could not reach the server",
+    "signOutFailed": "Could not sign out. Try refreshing the page.",
+    "verifying": "Verifying invitation…",
+    "tryAgain": "Try again",
+    "createNewAccount": "Create a new account instead",
+    "signIn": "Sign in",
+    "accepting": "Accepting…",
+    "accept": "Accept invitation",
+    "stay": "Stay signed in",
+    "signingOut": "Signing out…",
+    "signOutRetry": "Sign out & use a different email",
+    "createAndJoin": "Create account & join",
+    "haveAccount": "I already have an account",
+    "fail": {
+      "not_found": {
+        "title": "Invite not found",
+        "body": "This link doesn’t match a valid invitation. Double-check the URL or ask the person who invited you to send a new one."
+      },
+      "used": {
+        "title": "Invite already used",
+        "body": "This invitation has already been accepted. If that wasn’t you, ask the account admin to send a fresh link."
+      },
+      "expired": {
+        "title": "Invite expired",
+        "body": "This invitation has expired. Ask the account admin to send a new one — they take a few seconds to generate."
+      },
+      "server_error": {
+        "title": "Something went wrong",
+        "body": "We couldn’t verify this invitation right now. Try refreshing the page in a moment."
+      }
+    },
+    "role": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "agent": "Agent",
+      "viewer": "Viewer"
+    },
+    "invitedTo": "You're invited to <account></account>",
+    "joinAs": "You'll join as",
+    "linkValidUntil": ". Link valid until",
+    "acceptHint": "Accepting moves your login into <account></account>. Your empty personal account from signup will be cleaned up.",
+    "conflictTitle": "Can't join {account} with this account",
+    "conflictHint": "To join <account></account>, sign out and sign up again with a different email address. The invite link stays valid as long as it hasn't expired."
+  },
+  "AgentsPage": {
+    "title": "AI Agents",
+    "tabPlayground": "Playground",
+    "tabSetup": "Setup",
+    "tabUsage": "Usage",
+    "description": "Your bring-your-own-key AI agent — set it up, then test it in the playground before it replies to customers in the inbox."
+  },
+  "Common": {
+    "loading": "Loading..."
+  },
+  "AiPlayground": {
+    "notConfigured": "No agent configured yet — finish Setup first.",
+    "unreachable": "Couldn't reach the agent.",
+    "title": "Playground",
+    "subtitle": "— test replies as if you were a customer",
+    "wouldHandoff": "Would hand off to a human here",
+    "placeholder": "Type a customer message…",
+    "noReply": "Couldn't get a reply.",
+    "reset": "Reset",
+    "goToSetup": "Not set up yet? Go to Setup",
+    "thinking": "Thinking…",
+    "emptyTitle": "Send a message to see how your agent would reply.",
+    "emptyDesc": "It uses your knowledge base and behaves exactly like the auto-reply bot — including handoff."
+  },
+  "AiUsage": {
+    "emptyDesc": "This fills in as the assistant drafts and auto-replies.",
+    "totalTokens": "Total tokens",
+    "llmCalls": "LLM calls",
+    "autoReply": "Auto-reply",
+    "drafts": "Drafts",
+    "perDay": "Tokens per day",
+    "byModel": "By model",
+    "loadFailed": "Failed to load usage",
+    "title": "Token usage",
+    "description": "Tokens spent on your provider key by drafts and the auto-reply bot. Counts only — no message content is stored here.",
+    "lastDays": "Last {days} days",
+    "emptyTitle": "No AI usage in the last {days} days yet.",
+    "modelLine": "{tokens} tok · {calls} {calls, plural, =1 {call} other {calls}}",
+    "truncated": "Showing a partial window — usage is high enough that only the most recent records are summarized here."
+  },
+  "Interactive": {
+    "replyButtons": "Reply buttons",
+    "list": "List",
+    "bodyPlaceholder": "What the customer reads above the options",
+    "header": "Header (optional)",
+    "footer": "Footer (optional)",
+    "showIds": "Show reply IDs (advanced)",
+    "preview": "Preview",
+    "buttonLabel": "Button label",
+    "addButton": "Add button",
+    "sectionTitle": "Section title (optional)",
+    "rowTitle": "Row title",
+    "description": "Description (optional)",
+    "addRow": "Add row",
+    "addSection": "Add section",
+    "buttonsCount": "Buttons ({count}/{max})",
+    "rowsCount": "Rows ({count}/{max})",
+    "body": "Body",
+    "listButtonLabel": "List button label",
+    "messageBody": "Message body…",
+    "menu": "Menu"
   }
 }
